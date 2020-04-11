@@ -1,0 +1,13 @@
+<h1>CHATROOMS</h1>
+
+<% @chatrooms.each do |chatroom| %>
+  <%= link_to chatroom.topic, chatroom_path(chatroom) %>
+<% end %>
+
+<h3>New Chatroom</h3>
+<%= form_for Chatroom.new do |f| %>
+  <%= f.label :topic %>:
+  <%= f.text_field :topic %>
+
+  <%= f.submit "send", class: "btn btn-primary" %>
+<% end %>
