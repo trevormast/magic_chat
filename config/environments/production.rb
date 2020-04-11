@@ -91,4 +91,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.web_socket_server_url = "wss://magic-merlin-chat.herokuapp.com/cable"
+
+  config.action_cable.allowed_request_origins = ['https://magic-merlin-chat.herokuapp.com', 'http://magic-merlin-chat.herokuapp.com']
 end
